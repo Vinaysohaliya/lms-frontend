@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 
-const HomeLayput = ({ children }) => {
+const HomeLayout = ({ children }) => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -113,4 +113,4 @@ const HomeLayput = ({ children }) => {
     )
 }
 
-export default HomeLayput
+export default HomeLayout
