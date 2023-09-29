@@ -20,7 +20,7 @@ const HomePage = () => {
                 Exlpore Coures
               </button>
             </Link>
-            <Link to="/contatc">
+            <Link to="/contact">
               <button className=' border  px-5 py-3 rounded-md font-semibold text-lg cursor-pointer hover:bg-yellow-600 transition-all ease-in-out duration-300'>
                 Contact
               </button>

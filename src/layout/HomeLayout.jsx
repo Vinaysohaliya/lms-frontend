@@ -32,17 +32,9 @@ const HomeLayout = ({ children }) => {
         // changeWidth()
     }
 
-    function handellogout(e) {
-        e.preventDefault();
-
-        if (res) {
-            
-        }
-        navigate("/")
-    }
 
     return (
-        <div className=' min-h-[90vh] '>
+        <div className=' min-h-[90vh] bg-gray-900'>
             <div className="drawer absolute left-0 z-50 w-fit">
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">

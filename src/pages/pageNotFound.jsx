@@ -9,7 +9,7 @@ const PageNotFound = () => {
       <div className=' bg-black text-white px-2 text-sm rounded rotate-12 absolute'>Page Not Found....</div>
       <button onClick={() => navigate(-1)} className=' mt-5'>
         <a className=' relative inline-block text-sm font-medium text-[#FF6A3D] group active:text-yellow-500 focus:outline-none focus:ring'>
-          <span className=' relative block px-8 py-3 bg-[#1A2238] border-current'>Go Back</span>
+          <span className=' relative block px-8 py-3 bg-[#1A2238] border-current'>Go Back</span>0
         </a>
       </button>
 

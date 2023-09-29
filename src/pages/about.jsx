@@ -43,9 +43,7 @@ const About = () => {
                     </div>
                     <div id="item5" className="carousel-item w-full">
                         <img src={billgates} className="w-full" />
-                    </div>
-                    
-                   
+                    </div>  
                 </div>
                 <div className="flex justify-center w-full py-2 gap-2">
                     <a href="#item1" className="btn btn-xs">1</a>
