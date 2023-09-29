@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeLayout from '../layout/HomeLayout'
+import HomeLayout from '../Layout/HomeLayout'
 import { Link } from 'react-router-dom'
 import Homeimg from '../assets/Images/homePageMainImage.png'
 

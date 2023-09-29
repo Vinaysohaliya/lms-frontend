@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeLayout from '../layout/HomeLayout'
+import HomeLayout from '../Layout/HomeLayout'
 import aboutImg from '../assets/Images/aboutMainImage.png'
 import apj from '../assets/Images/apj.png'
 import billgates from '../assets/Images/billGates.png'
