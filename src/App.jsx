@@ -6,6 +6,7 @@ import PageNotFound from './pages/pageNotFound'
 import Signup from './pages/signup'
 import Login from './pages/login'
 import CourseList from './pages/CourseList'
+import Contact from './pages/Contact'
 function App() {
 
   return ( 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path="/courses" element={<CourseList />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<PageNotFound/>} />
       </Routes>
     </>
