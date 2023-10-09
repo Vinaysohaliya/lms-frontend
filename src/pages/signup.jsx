@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
-// import { BsPersonCircle } from 'react-icons/bs';
+import { BsPersonCircle } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
-// import { isEmail, isValidPassword } from '../Helpers/regexMatcher';
+import { isEmail, isValidPassword } from '../Helpers/regexMatcher';
 import HomeLayout from '../Layout/HomeLayout';
-import { createAccount } from '../Redux/Slices/AuthSlice';
+import { createAccount } from '../Redux/Slices/authSlice';
 
 function Signup() {
 
@@ -14,13 +14,13 @@ function Signup() {
     const navigate = useNavigate();
 
     
-    // const [previewImage, setPreviewImage] = useState("");
+    const [previewImage, setPreviewImage] = useState("");
 
     const [signupData, setSignupData] = useState({
         fullName: "",
         email: "",
         password: "",
-        // avatar: ""
+        avatar: ""
     });
 
     function handleUserInput(e) {
@@ -31,23 +31,23 @@ function Signup() {
         })
     }
 
-    // function getImage(event) {
-    //     event.preventDefault();
-    //     // getting the image
-    //     const uploadedImage = event.target.files[0];
+    function getImage(event) {
+        event.preventDefault();
+        // getting the image
+        const uploadedImage = event.target.files[0];
 
-    //     if(uploadedImage) {
-    //         setSignupData({
-    //             ...signupData,
-    //             avatar: uploadedImage
-    //         });
-    //         const fileReader = new FileReader();
-    //         fileReader.readAsDataURL(uploadedImage);
-    //         fileReader.addEventListener("load", function () {
-    //             setPreviewImage(this.result);
-    //         })
-    //     }
-    // }
+        if(uploadedImage) {
+            setSignupData({
+                ...signupData,
+                avatar: uploadedImage
+            });
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(uploadedImage);
+            fileReader.addEventListener("load", function () {
+                setPreviewImage(this.result);
+            })
+        }
+    }
 
     async function createNewAccount(event) {
         event.preventDefault();
@@ -76,7 +76,7 @@ function Signup() {
         formData.append("fullName", signupData.fullName);
         formData.append("email", signupData.email);
         formData.append("password", signupData.password);
-        // formData.append("avatar", signupData.avatar);
+        formData.append("avatar", signupData.avatar);
 
         // dispatch create account action
         const response = await dispatch(createAccount(formData));
@@ -87,7 +87,7 @@ function Signup() {
             fullName: "",
             email: "",
             password: "",
-            // avatar: ""
+            avatar: ""
         });
         setPreviewImage("");
 
@@ -96,11 +96,11 @@ function Signup() {
 
     return (
         <HomeLayout>
-            <div className='flex overflow-x-auto items-center justify-center h-[100vh]'>
+            <div className='flex overflow-x-auto items-center justify-center h-[100vh] bg-slate-800'>
                 <form noValidate onSubmit={createNewAccount} className='flex flex-col justify-center gap-3 rounded-lg p-4 text-white w-96 shadow-[0_0_10px_black]'>
                     <h1 className="text-center text-2xl font-bold">Registration Page</h1>
 
-                    {/* <label htmlFor="image_uploads" className="cursor-pointer">
+                    <label htmlFor="image_uploads" className="cursor-pointer">
                         {previewImage ? (
                             <img className="w-24 h-24 rounded-full m-auto" src={previewImage} />
                         ) : (
@@ -114,7 +114,7 @@ function Signup() {
                         name="image_uploads"
                         id="image_uploads"
                         accept=".jpg, .jpeg, .png, .svg"
-                    /> */}
+                    />
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="fullName" className='font-semibold'> Name </label>
                         <input 

@@ -4,9 +4,9 @@ import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
 import HomeLayout from '../Layout/HomeLayout';
-import { login } from '../Redux/Slices/AuthSlice';
+import { login } from '../Redux/Slices/authSlice';
 
-function Login() {
+function Signup() {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -44,7 +44,7 @@ function Login() {
 
     return (
         <HomeLayout>
-            <div className='flex overflow-x-auto items-center justify-center h-[100vh]'>
+            <div className='flex overflow-x-auto items-center justify-center h-[100vh] bg-slate-800'>
                 <form noValidate onSubmit={onLogin} className='flex flex-col justify-center gap-3 rounded-lg p-4 text-white w-96 shadow-[0_0_10px_black]'>
                     <h1 className="text-center text-2xl font-bold">Login Page</h1>
                     <div className='flex flex-col gap-1'>
@@ -88,4 +88,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Signup;

@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import CourseCard from "../components/CourseCard";
-import HomeLayout from "../Layout/HomeLayout";
-import { getAllCourses } from "../Redux/Slices/CourseSlice";
+import CourseCard from "../../components/CourseCard";
+import HomeLayout from "../../Layout/HomeLayout";
+import { getAllCourses } from "../../Redux/Slices/CourseSlice";
 
 function CourseList() {
     const dispatch = useDispatch();
@@ -20,7 +20,7 @@ function CourseList() {
 
     return (
         <HomeLayout>
-            <div className="min-h-[90vh] pt-12 pl-20 flex flex-col gap-10 text-white">
+            <div className="min-h-[90vh] pt-12 pl-20 flex flex-col gap-10 bg-slate-800 text-white">
                 <h1 className="text-center text-3xl font-semibold mb-5">
                     Explore the courses made by
                     <span className="font-bold text-yellow-500">

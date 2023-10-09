@@ -10,7 +10,7 @@ import statSliceReducer from './Slices/StatSlice';
 const store = configureStore({
     reducer: {
         auth: authSliceReducer,
-        course: courseSliceReducer,
+        course: courseSliceReducer, 
         razorpay: razorpaySliceReducer,
         lecture: lectureSliceReducer,
         stat: statSliceReducer

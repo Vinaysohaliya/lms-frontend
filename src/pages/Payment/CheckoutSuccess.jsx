@@ -3,7 +3,7 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
-import HomeLayout from "../../Layouts/HomeLayout";
+import HomeLayout from "../../Layout/HomeLayout";
 import { getUserData } from "../../Redux/Slices//authSlice";
 
 function CheckoutSuccess() {
@@ -15,7 +15,7 @@ function CheckoutSuccess() {
 
     return (
         <HomeLayout>
-            <div className="min-h-[90vh] flex items-center justify-center text-white">
+            <div className="min-h-[90vh] flex items-center justify-center text-white bg-slate-800">
                 <div className="w-80 h-[26rem] flex flex-col justify-center items-center shadow-[0_0_10px_black] rounded-lg relative">
                     <h1 className="bg-green-500 absolute text-center top-0 w-full py-4 text-2xl font-bold rounded-tl-lg rounded-tr-lg">Payment Successfull</h1>
 

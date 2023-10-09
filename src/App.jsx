@@ -2,8 +2,8 @@ import './App.css';
 
 import { Route, Routes } from 'react-router-dom';
 
-import RequireAuth from './Components/Auth/RequireAuth';
-import AboutUs from './Pages/AboutUs';
+import RequireAuth from './components/Auth/RequireAuth';
+import About from './Pages/about';
 import Contact from './Pages/Contact';
 import CourseDescription from './Pages/Course/CourseDescription';
 import CourseList from './Pages/Course/CourseList';
@@ -14,7 +14,7 @@ import Displaylectures from './Pages/Dashboard/Displaylectures';
 import Denied from './Pages/Denied';
 import HomePage from './Pages/HomePage';
 import Login from './Pages/Login';
-import NotFound from './Pages/NotFound';
+import NotFound from './Pages/pageNotFound';
 import Checkout from './Pages/Payment/Checkout';
 import CheckoutFailure from './Pages/Payment/CheckoutFailure';
 import CheckoutSuccess from './Pages/Payment/CheckoutSuccess';
@@ -26,8 +26,9 @@ function App() {
   return (
     <>
       <Routes>
+
         <Route path="/" element={<HomePage />} ></Route>
-        <Route path="/about" element={<AboutUs />} ></Route>\
+        <Route path="/about" element={<About />} ></Route>\
         <Route path="/courses" element={<CourseList />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/denied" element={<Denied />} />

@@ -8,7 +8,7 @@ import { GiMoneyStack } from "react-icons/gi";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import HomeLayout from "../../Layouts/HomeLayout";
+import HomeLayout from "../../Layout/HomeLayout";
 import { deleteCourse, getAllCourses } from "../../Redux/Slices/CourseSlice";
 import { getPaymentRecord } from "../../Redux/Slices/RazorpaySlice";
 import { getStatsData } from "../../Redux/Slices/StatSlice";
@@ -78,7 +78,7 @@ function AdminDashboard() {
 
     return (
         <HomeLayout>
-            <div className="min-h-[90vh] pt-5 flex flex-col flex-wrap gap-10 text-white">
+            <div className="min-h-[90vh] pt-5 flex flex-col flex-wrap gap-10 bg-slate-800 text-white">
                 <h1 className="text-center text-5xl font-semibold text-yellow-500">
                     Admin Dashboard
                 </h1>

@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import { toast } from "react-hot-toast";
 
-import axiosInstance from "../../Helpers/axiosInstance";
+import axiosInstance from "../../Helpers/axiosInstances";
 
 const initialState = {
     courseData: []
@@ -24,6 +24,7 @@ export const getAllCourses = createAsyncThunk("/course/get", async () => {
 
 export const deleteCourse = createAsyncThunk("/course/delete", async (id) => {
     try {
+        console.log(id);
         const response = axiosInstance.delete(`/courses/${id}`);
         toast.promise(response, {
             loading: "deleting course ...",
