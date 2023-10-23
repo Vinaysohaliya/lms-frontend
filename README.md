@@ -15,7 +15,7 @@ https://drive.google.com/file/d/1AleFkiRXZXPV3R0HbCot33dN9jvGjpVH/view?usp=shari
 
 1.Clone the project
 
-    https://github.com/singhsanket143/lms-frontend-hn.git
+    https://github.com/Vinaysohaliya/lms-frontend.git
 
 
 2.Move into the directory
